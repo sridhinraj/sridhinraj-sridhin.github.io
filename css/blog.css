@@ -143,3 +143,47 @@ blockquote {
   border: none;
   border-left: 4px solid #b8a07e;
 }
+/* Graphic Design Section */
+#graphic-design {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+#graphic-design .section-title h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#graphic-design .section-title p {
+  font-size: 16px;
+  color: #666;
+}
+
+.graphic-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.graphic-card:hover {
+  transform: translateY(-5px);
+}
+
+.graphic-img img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.graphic-desc {
+  font-size: 15px;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #333;
+}
