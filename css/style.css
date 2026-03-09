@@ -239,13 +239,35 @@ nav ul li a {
 /*  Header
 /*-----------------------------------------------------------------------------------*/
 
-#header {
-  background: url("../images/home-bg.jpg") repeat scroll center center / cover;
-  height: 100vh;
-  width: 100%;
+
+#header{
+height:100vh;
+width:100%;
+position:relative;
+overflow:hidden;
+color:white;
+
+/* Dark game-engine grid */
+background-color:#0a0a0a;
+background-image:
+linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+background-size:40px 40px;
+}
+#particles-js{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:1;
 }
 
-
+.header-content{
+position:relative;
+z-index:3;
+}
 #header .header-content {
   height: 100vh;
   text-align: left;
@@ -253,6 +275,41 @@ nav ul li a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+/* ===== ROLE ANIMATION ===== */
+
+@keyframes fadeOut{
+0%{opacity:1;}
+100%{opacity:0;}
+}
+
+@keyframes fadeIn{
+0%{opacity:0;}
+100%{opacity:1;}
+}
+
+.role-container{
+font-size:22px;
+color:white;
+font-weight:600;
+height:30px;
+position:relative;
+}
+
+.role{
+position:absolute;
+left:0;
+top:0;
+}
+
+.game-developer{
+animation:fadeOut 5s ease forwards;
+}
+
+.technical-artist{
+opacity:0;
+animation:fadeIn 3s ease forwards;
+animation-delay:5s;
 }
 
 .header-content h1 {
@@ -282,6 +339,7 @@ nav ul li a {
   color: #fff;
   font-size: 15px;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Aout-us
@@ -628,4 +686,528 @@ nav ul li a {
 
 .credits {
   font-size: 13px;
+}
+/* Graphic Design Title Decoration */
+
+.graphic-title{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.title-decoration{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:15px 0;
+}
+
+.title-decoration span{
+  width:60px;
+  height:2px;
+  background:#b8a07e;
+  margin:0 10px;
+}
+
+.title-decoration .diamond{
+  width:12px;
+  height:12px;
+  background:#b8a07e;
+  transform:rotate(45deg);
+}
+/* =======================================================
+MODERN PORTFOLIO ENHANCEMENT STYLE
+======================================================= */
+
+/* Modern font */
+
+body{
+font-family:'Poppins', sans-serif;
+}
+
+/* Hero cinematic overlay */
+
+#header{
+position:relative;
+}
+
+#header::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+.header-content{
+position:relative;
+z-index:2;
+}
+
+
+/* Modern section title */
+
+.modern-title{
+font-size:34px;
+font-weight:700;
+letter-spacing:3px;
+position:relative;
+display:inline-block;
+margin-bottom:20px;
+}
+
+.modern-title::after{
+content:"";
+width:70px;
+height:3px;
+background:#b8a07e;
+display:block;
+margin:15px auto 0;
+}
+
+
+/* Portfolio video cards */
+
+.portfolio-thumbnail{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:all 0.4s ease;
+}
+
+.portfolio-thumbnail:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
+.portfolio-thumbnail video{
+border-radius:10px;
+margin-bottom:15px;
+}
+
+
+/* Graphic design cards */
+
+.design-card{
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:all 0.4s ease;
+margin-bottom:30px;
+}
+
+.design-card img{
+width:100%;
+transition:transform 0.5s ease;
+}
+
+.design-card:hover img{
+transform:scale(1.08);
+}
+
+.design-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.design-info{
+padding:20px;
+}
+
+.design-info h3{
+font-size:18px;
+font-weight:600;
+color:#292929;
+margin-bottom:10px;
+}
+
+.design-info p{
+font-size:14px;
+color:#777;
+}
+
+
+/* Skills cards */
+
+.services-block{
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:all 0.3s ease;
+}
+
+.services-block:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 35px rgba(0,0,0,0.15);
+}
+
+
+/* Modern buttons */
+
+.btn-warning{
+background:#07fddc;
+border:none;
+padding:2px 56px;
+font-weight:600;
+letter-spacing:1px;
+transition:all 0.3s ease;
+}
+
+.btn-warning:hover{
+background:#42dbdb;
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* Smooth image hover */
+
+img{
+transition:transform 0.4s ease;
+}
+
+img:hover{
+transform:scale(1.02);
+}
+
+
+/* Smooth scrolling */
+
+html{
+scroll-behavior:smooth;
+}
+
+
+/* Graphic design background */
+
+#graphic-design{
+background:linear-gradient(to bottom,#f8f9fa,#ffffff);
+}
+/* 3D hover portfolio */
+
+.portfolio-thumbnail{
+transform-style:preserve-3d;
+transition:transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.portfolio-thumbnail:hover{
+transform:rotateX(5deg) rotateY(-5deg) scale(1.03);
+box-shadow:0 30px 60px rgba(0,0,0,0.25);
+}
+/* Game showcase overlay */
+
+/* =====================================
+GAME PORTFOLIO FINAL FIX + ENHANCEMENTS
+===================================== */
+
+/* Game card container */
+
+.game-card{
+position:relative;
+overflow:hidden;
+border-radius:12px;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* hover lift */
+
+.game-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* video styling */
+
+.game-card video{
+width:100%;
+display:block;
+border-radius:12px;
+position:relative;
+z-index:1;
+transition:transform 0.6s ease;
+filter:contrast(1.1) saturate(1.2);
+}
+
+/* cinematic hover zoom */
+
+.game-card:hover video{
+transform:scale(1.08);
+}
+
+/* cinematic gradient overlay */
+
+.game-card::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:65%;
+background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+pointer-events:none;
+z-index:2;
+border-radius:12px;
+}
+
+/* game info overlay */
+
+.game-overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:100%;
+padding:20px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+opacity:0;
+transition:opacity 0.4s ease;
+z-index:3;
+pointer-events:none;
+}
+
+.game-card:hover .game-overlay{
+opacity:1;
+}
+
+/* sound button fix */
+
+.sound-btn{
+position:absolute;
+top:12px;
+right:12px;
+z-index:999;
+background:rgba(0,0,0,0.65);
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+backdrop-filter:blur(6px);
+}
+
+.sound-btn:hover{
+background:#ffcc00;
+color:black;
+}
+
+/* steam style play button */
+
+.play-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#ffcc00;
+color:#000;
+font-weight:600;
+border-radius:6px;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 0 10px rgba(255,204,0,0.6);
+}
+
+.play-btn:hover{
+background:#0dc9eb;
+box-shadow:
+0 0 10px #15c4f0,
+0 0 20px #12ddf8,
+0 0 30px #13b3e4;
+transform:translateY(-2px);
+}
+
+.pixel-meteor{
+position:absolute;
+width:6px;
+height:6px;
+background:#00ffff;
+box-shadow:0 0 10px #00ffff;
+animation:meteor 5s linear infinite;
+}
+
+@keyframes meteor{
+0%{
+transform:translate(-100px,-100px);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translate(1400px,700px);
+opacity:0;
+}
+
+}
+.cube{
+position:absolute;
+width:20px;
+height:20px;
+border:2px solid #00ffff;
+animation:float 8s infinite linear;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-40px);}
+100%{transform:translateY(0);}
+}
+ /* ===== PARTICLE BACGROUND ===== */
+#particles-js{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:1;
+}
+
+.header-content{
+position:relative;
+z-index:2;
+}
+
+
+
+    /* ===== Graphic Design Section Styling ===== */
+ 
+#graphic-design h2{
+font-weight:700;
+color:#333;
+margin-bottom:15px;
+}
+
+#graphic-design p{
+color:#777;
+margin-bottom:40px;
+}
+
+#graphic-design .card{
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+border:none;
+border-radius:15px;
+overflow:hidden;
+}
+
+#graphic-design .card:hover{
+transform:translateY(-10px);
+box-shadow:0px 8px 20px rgba(0,0,0,0.15);
+}
+
+#graphic-design img{
+border-radius:10px;
+width:100%;
+height:auto;
+}
+.gallery-page{
+background:white;
+padding:80px;
+min-height:100vh;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery-grid img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:12px;
+cursor:pointer;
+transition:transform 0.3s ease;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+.back-btn{
+margin-bottom:30px;
+padding:10px 20px;
+border:none;
+background:black;
+color:white;
+cursor:pointer;
+}
+.image-viewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.image-viewer img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+/* ===== DESIGN CARD FIX ===== */
+
+#graphic-design .row{
+display:flex;
+flex-wrap:wrap;
+align-items:stretch;
+}
+
+/* design card container */
+.design-card{
+height:100%;
+display:flex;
+flex-direction:column;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover effect */
+.design-card:hover{
+transform:translateY(-10px);
+box-shadow:0px 8px 20px rgba(0,0,0,0.15);
+}
+
+/* force all images same size */
+.design-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+/* text section */
+.design-info{
+padding:20px;
+flex-grow:1;
+text-align:left;
+}
+
+.design-info h3{
+font-size:18px;
+margin-bottom:8px;
+}
+
+.design-info p{
+font-size:14px;
+color:#777;
 }

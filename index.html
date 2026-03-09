@@ -7,445 +7,452 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Welcome to Sridhin's Vibrant Portfolio!</title>
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta content="Game Developer & Technical Artist Portfolio" name="description">
+  <meta content="Game Developer, Unity, Unreal, Technical Artist, Portfolio" name="keywords">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+ <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"><!-- Bootstrap CSS -->
 
-  <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
+  <!-- Libraries CSS -->
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
   <link href="lib/hover/hover.min.css" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
+  <!-- Main CSS -->
   <link href="css/style.css" rel="stylesheet">
-
-  <!-- Responsive css -->
   <link href="css/responsive.css" rel="stylesheet">
 
+ <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.png">
 
-  <!-- =======================================================
-    Theme Name: Folio
-    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+  <style>
+   
+
+  </style>
 </head>
+<script>
+
+function toggleSound(videoId, button){
+
+let videos=document.querySelectorAll("video");
+
+videos.forEach(v=>{
+if(v.id!==videoId){
+v.muted=true;
+}
+});
+
+let video=document.getElementById(videoId);
+
+if(video.muted){
+video.muted=false;
+button.innerHTML="🔊";
+}else{
+video.muted=true;
+button.innerHTML="🔇";
+}
+
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js", {
+
+particles:{
+number:{value:80},
+color:{value:"#ffffff"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+
+line_linked:{
+enable:true,
+distance:150,
+color:"#ffffff",
+opacity:0.4,
+width:1
+},
+
+move:{
+enable:true,
+speed:2
+}
+
+},
+
+interactivity:{
+events:{
+onhover:{enable:true,mode:"repulse"}
+}
+}
+
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+
+function openGallery(id){
+
+document.getElementById("graphic-design").style.display="none";
+document.getElementById(id).style.display="block";
+
+}
+
+function closeGallery(){
+
+document.getElementById("graphic-design").style.display="block";
+
+document.querySelectorAll(".gallery-page").forEach(g=>{
+g.style.display="none";
+});
+
+}
+
+function openImage(img){
+document.getElementById("imageViewer").style.display="flex";
+document.getElementById("viewerImg").src = img.src;
+}
+
+function closeImage(){
+document.getElementById("imageViewer").style.display="none";
+}
+
+</script>
 
 <body>
 
-  <!-- start section navbar -->
+  <!-- ===== Navbar ===== -->
   <nav id="main-nav">
-    <div class="row">
-      <div class="container">
-
-        <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-        </div>
-
-        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
-
-        <ul class="nav-menu list-unstyled">
-          <li><a href="#header" class="smoothScroll">Home</a></li>
-          <li><a href="#about" class="smoothScroll">About</a></li>
-          <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
-          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-          <li><a href="#graphic-design" class="smoothScroll">Graphic Design</a></li>
-        </ul>
-
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <a href="#header"><img src="images/logo.png" alt="logo"></a>
       </div>
+      <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+      <ul class="nav-menu list-unstyled d-flex">
+        <li><a href="#header" class="smoothScroll">Home</a></li>
+        <li><a href="#about" class="smoothScroll">About</a></li>
+        <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
+        <li><a href="#graphic-design" class="smoothScroll">Graphic Design</a></li>
+        <li><a href="#contact" class="smoothScroll">Contact</a></li>
+      </ul>
     </div>
   </nav>
-  <!-- End section navbar -->
 
+  <!-- ===== Header Section ===== -->
+<header id="header" class="home text-center">
 
-  <!-- start section header -->
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>magnific-popup Animation</title>
-  <style>
-    @keyframes fadeOut {
-      from {
-        opacity: 5; /* Start with full opacity */
-      }
-      to {
-        opacity: 0; /* Fade out to 0 opacity */
-      }
-    }
-  
-    @keyframes fadeIn {
-      from {
-        opacity: 0; /* Start with 0 opacity */
-      }
-      to {
-        opacity: 5; /* Fade in to full opacity */
-      }
-    }
-  
-    .game-developer {
-      animation: fadeOut 6s ease forwards; /* Fade out GameDeveloper */
-      font-weight: bold; /* Make the text bold */
-    }
-  
-    .technical-artist {
-      animation: fadeIn 4s ease forwards; /* Fade in Technical Artist */
-      animation-delay: 1s; /* Delay the animation by 5 seconds */
-      animation: fadeOut 8s ease forwards; /* Fade out Technical Artist */
-      font-weight: bold; /* Make the text bold */
-    }
-  </style>
-  </head>
-  <body>
-  <div id="header" class="home">
-    <div class="container">
-      <div class="header-content">
-        <h1>i am Sridhinraj k.p<span class="sridhin"></span></h1>
-        <p id="developer-text" class="game-developer">GameDeveloper,</p>
-        <ul class="list-unstyled list-social">
-          <li><a href="https://www.facebook.com/Sridhinraj sro"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="https://www.instagram.com/sridhin_raj_?igsh=MW1qMmxkb3h1OWttYg==_"><i class="ion-social-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/sridhin-raj-kp-979bb4255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app _"><i class="ion-social-linkedin"></i></a></li>
-          <a href="Simple Professional CV Resume_20250226_121427_0000.pdf" download class="btn btn-warning">Download CV</a> 
-        </ul>      
-      </div>
-    </div>
-  </div>
-  
-  <script>
-    // Function to change the text dynamically after a delay
-    setTimeout(function() {
-      document.getElementById('developer-text').classList.remove('game-developer');
-      document.getElementById('developer-text').classList.add('technical-artist');
-      document.getElementById('developer-text').textContent = ('technical artist');
-    }, 3000); // Delay in milliseconds (5 seconds)
-  </script>
-  </body>
-  </html>
-  
-  <!-- End section header -->
+<!-- Particles background -->
+<div id="particles-js"></div>
 
+<!-- Shooting stars -->
 
-  <!-- start section about us -->
+<div class="pixel-meteor" style="top:100px;"></div>
+<div class="pixel-meteor" style="top:250px; animation-delay:2s;"></div>
+<div class="pixel-meteor" style="top:400px; animation-delay:4s;"></div>
+
+<div class="cube" style="left:10%; top:70%"></div>
+<div class="cube" style="left:60%; top:60%"></div>
+<div class="cube" style="left:80%; top:50%"></div>
+
+<div class="container">
+<div class="header-content">
+
+<h1>I am <strong>Sridhinraj K.P</strong></h1>
+
+<div class="role-container">
+<span class="role game-developer">Game Developer</span>
+<span class="role technical-artist">Technical Artist</span>
+</div>
+
+<ul class="list-unstyled list-social">
+<li><a href="https://www.facebook.com/Sridhinrajsro"><i class="ion-social-facebook"></i></a></li>
+<li><a href="https://www.instagram.com/sridhin_raj_"><i class="ion-social-instagram"></i></a></li>
+<li><a href="https://www.linkedin.com/in/sridhin-raj-kp-979bb4255"><i class="ion-social-linkedin"></i></a></li>
+</ul>
+
+<p href="Simple Professional CV Resume_20250226_121427_0000.pdf" download class="btn btn-warning">
+Download CV
+</a>
+
+</div>
+</div>
+
+</header>
+  <!-- ===== About Section ===== -->
   <div id="about" class="paddsection">
     <div class="container">
-      <div class="row justify-content-between">
-
-        <div class="col-lg-4 ">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-4">
           <div class="div-img-bg">
-            <div class="about-img">
-              <img src="images/me.jpg" class="img-responsive" alt="me">
-            </div>
+            <img src="images/me.jpg" class="img-fluid rounded" alt="me">
           </div>
         </div>
-      </style>
-    </head>
-    <body>
-      <div class="col-lg-7">
-        <div class="about-descr">
-                   <h1> <p class="p-heading">I am a skilled Game Developer and Technical Artist, proficient in crafting immersive gaming experiences. With a passion for innovation, I find joy in conceptualizing and creating games that push the boundaries of creativity and technology. My expertise lies in seamlessly merging technical prowess with artistic vision to bring innovative ideas to life. I thrive in environments where collaboration and innovation are valued, and I am dedicated to delivering exceptional gaming experiences that captivate audiences.</p>
-        </h1>
-        </div>
-      </div>
-    </body>
-    </html>
-  <!-- end section about us -->
-
-
-  <!-- start section services -->
-  <!DOCTYPE html>
-</div>
-</div>
-</div>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills</title>
-<!-- Add Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-  <div id="services">
-    <div class="container">
-      <div class="services-carousel owl-theme">
-        <div class="services-block">
-          <i class="fas fa-gamepad"></i> <!-- Font Awesome gamepad icon -->
-          <span>Unity</span>
-          <p class="separator">70%</p>
-        </div>
-        <div class="services-block">
-          <i class="fas fa-gamepad"></i> <!-- Font Awesome gamepad icon -->
-          <span>Unreal Engine</span>
-          <p class="separator">60%</p>
-        </div>
-        <div class="services-block">
-          <i class="fas fa-paint-brush"></i> <!-- Font Awesome paint brush icon -->
-          <span>Photoshop</span>
-          <p class="separator">70%</p>
-        </div>
-        <div class="services-block">
-          <i class="fas fa-gamepad"></i> <!-- Font Awesome gamepad icon -->
-          <span>Maya</span>
-          <p class="separator">50%</p>
-        </div>
-        <div class="services-block">
-          <i class="fas fa-gamepad"></i> <!-- Font Awesome gamepad icon -->
-          <span>Blender</span>
-          <p class="separator">60%</p>
-        </div>
-        <div class="services-block">
-          <i class="fas fa-video"></i> <!-- Font Awesome video icon -->
-          <span>Adobe After Effects</span>
-          <p class="separator">70%</p>
-        </div>
-        <div class="services-block">
-          <i class="fas fa-video"></i> <!-- Font Awesome video icon -->
-          <span>Premiere Pro</span>
-          <p class="separator">70%</p>
+        <div class="col-lg-7">
+          <div class="about-descr">
+            <p class="p-heading">
+              I am a skilled Game Developer and Technical Artist, proficient in crafting immersive gaming experiences. 
+              My expertise lies in merging technical precision with artistic creativity, building projects that inspire and engage.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</body>
-</html>
 
-  <!-- end section services -->
-
-
-  <!-- start section portfolio -->
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <style>
-    /* Style for the video container */
-    .portfolio-thumbnail video {
-      width: 100%; /* Make the video player responsive */
-      height: auto;
-    }
-  </style>
-  </head>
-  <body>
-    <div id="portfolio" class="text-center paddsection">
-      <div class="container">
-        <div class="section-title text-center">
-          <h2>My Portfolio</h2>
-        </div>
+  <!-- ===== Skills Section ===== -->
+  <div id="services">
+    <div class="container">
+      <div class="services-carousel owl-theme text-center">
+        <div class="services-block"><i class="fas fa-gamepad"></i><span>Unity</span><p>70%</p></div>
+        <div class="services-block"><i class="fas fa-gamepad"></i><span>Unreal Engine</span><p>60%</p></div>
+        <div class="services-block"><i class="fas fa-paint-brush"></i><span>Photoshop</span><p>70%</p></div>
+        <div class="services-block"><i class="fas fa-cube"></i><span>Maya</span><p>50%</p></div>
+        <div class="services-block"><i class="fas fa-cube"></i><span>Blender</span><p>60%</p></div>
+        <div class="services-block"><i class="fas fa-video"></i><span>After Effects</span><p>70%</p></div>
+        <div class="services-block"><i class="fas fa-video"></i><span>Premiere Pro</span><p>70%</p></div>
+                <div class="services-block"><i class="fas fa-cube"></i><span>Illustrator</span><p>80%</p></div>
       </div>
-    
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="portfolio-list">
-              <ul class="nav list-unstyled" id="portfolio-flters">
-                <li class="filter" data-filter=".branding">Games</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 portfolio-thumbnail all branding uikits webdesign">
-            <video controls autoplay width="600" height="336"> <!-- Added autoplay attribute and adjusted width and height -->
-              <source src="images/lv_0_20240217072114 (1).mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="text-center">
-              <h2>Chronicles of Celestial Echo</h2>
-              </h2><p>A 3D strategy-based game where there is an interactive pet and enemy robots. The main theme of the game is to survive and collect chests to finish the game,Platform:windows/linux.</p><h2></h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="https://sridhinrajkp.itch.io/chronicles-of-celestial-echo" download class="btn btn-warning">Download</a> 
-    </ul>  
-  
-      <div class="container">
-      </body>
-      </html>
-              </div>
-            </div>
-          </div>
-          
-      
-       
-          </div>
-        </div>
-      </div>
-      <div class="row">
-              <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 portfolio-thumbnail all branding uikits webdesign">
-                <video controls autoplay width="600" height="336"> <!-- Added autoplay attribute and adjusted width and height -->
-                  <source src="images/survival.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="text-center">
-                  <h2>dungeon Escape</h2>
-                  <h2> <p>An 3D survival game where the player has to escape fromn the dungeon by completing missions and avioding enemys.</p><h2></h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-        
-      <div class="container">
-      </body>
-      </html>
-              </div>
-            </div>
-          </div>
-          
-      
-       
-          </div>
-        </div>
-      </div>
-      <div class="row">
-              <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 portfolio-thumbnail all branding uikits webdesign">
-                <video controls autoplay width="600" height="336"> <!-- Added autoplay attribute and adjusted width and height -->
-                  <source src="images/bottleblaster.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="text-center">
-                  <h2>Bottle Blaster</h2>
-                  <h2> <p>An immersive Vr bottleblaster where the player have to shoot bottles using different guns.This game includes different dynamic environments which makes the player more involved</p><h2></h2>
-                </div>
-              </div>
+    </div>
+  </div>
 
-            
-           
-        
-              <!DOCTYPE html>
-              <html lang="en">
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Unity VFX</title>
-                <style>
-                  /* CSS for popping up effect */
-                  #myVideo {
-                    opacity: 100;
-                    transform: scale(1);
-                    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-                  }
-                </style>
-              </head>
-              <body>
-                <div class="container">
-                  <h1 class="text-center">Unity VFX</h1></h1> <!-- Title "Unity VFX" added here -->
-                  <div class="row">
-                  </div>
-                </div>
-                    <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 portfolio-thumbnail all branding uikits webdesign">
-                      <video id="myVideo" controls autoplay width="600" height="336">
-                        <source src="images/wobble effect.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                      <div class="text-center">
-                        <h2>wobble Effect Unity Shader</h2>
-                        <h2></h2><p>Crafting dynamic liquid wobble effects in Unity with customizable shader graphs.</p><h2></h2></h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  <!-- ===== Portfolio Section ===== -->
+  <div id="portfolio" class="text-center paddsection">
+<div class="container">
 
-              </style>
-            </head>
-            <body>
-              <div class="container">
-                <div class="row">
-                </div>
-              </div>
-                  <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 portfolio-thumbnail all branding uikits webdesign">
-                    <video id="myVideo" controls autoplay width="600" height="336">
-                      <source src="images/Blinking Lights.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <div class="text-center">
-                      <h2>Frensel Blinking Light effect</h2>
-                      <h2></h2><p>Creating a Blinking Light Effect using Frensel in the unity shader graphs.</p><h2></h2></h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <h1 class="text-center">OTHER WORKS</h1></h1> <!-- Title "OTHER WORKS" added here -->
-              <div class="row">
-              </div>
-            </div>
-                <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 portfolio-thumbnail all branding uikits webdesign">
-                  <video id="myVideo" controls autoplay width="600" height="336">
-                    <source src="images/HEDGEHOG EFFECT (1).mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                  <div class="text-center">
-                    <h2>hEDGEHOG LABELLING </h2>
-                    <h2></h2><p> dynamic labelling  an  object. the label moves to a free space caluculating the cameras  position and the objects  radius.</p><h2></h2></h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-              
-                <!-- Closing tags for div.container, div.row, and body/html -->
-              </body>
-              </html>
-              
-          
- <!-- start section graphic design -->
+<div class="section-title text-center">
+<h2>My Games</h2>
+</div>
 
-  <!-- start sectoion contact -->
+<!-- Game 1 -->
+<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+
+<video id="gameVideo1" autoplay muted loop width="600" height="336">
+<source src="images/lv_0_20240217072114 (1).mp4" type="video/mp4">
+</video>
+
+<button class="sound-btn" onclick="toggleSound('gameVideo1', this)">🔇</button>
+
+<div class="game-overlay">
+<h3>Chronicles of Celestial Echo</h3>
+<p>3D strategy survival game.</p>
+<a href="https://sridhinrajkp.itch.io/chronicles-of-celestial-echo" class="play-btn" target="_blank">Play Now</a>
+</div>
+
+</div>
 
 
-  <!-- start section footer -->
+<!-- Game 2 -->
+<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+
+<video id="gameVideo2" autoplay muted loop width="600" height="336">
+<source src="images/survival.mp4" type="video/mp4">
+</video>
+
+<button class="sound-btn" onclick="toggleSound('gameVideo2', this)">🔇</button>
+
+<div class="game-overlay">
+<h3>Dungeon Escape</h3>
+<p>3D survival game where the player must escape a dungeon by completing missions and avoiding enemies.</p>
+</div>
+
+</div>
+
+
+<!-- Game 3 -->
+<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+
+<video id="gameVideo3" autoplay muted loop width="600" height="336">
+<source src="images/bottleblaster.mp4" type="video/mp4">
+</video>
+
+<button class="sound-btn" onclick="toggleSound('gameVideo3', this)">🔇</button>
+
+<div class="game-overlay">
+<h3>Bottle Blaster VR</h3>
+<p>An immersive VR experience where players shoot bottles using different guns across dynamic environments.</p>
+</div>
+
+</div>
+
+
+<!-- Game 4 -->
+<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+
+<video id="gameVideo4" autoplay muted loop width="600" height="336">
+<source src="images/HEDGEHOG EFFECT (1).mp4" type="video/mp4">
+</video>
+
+<button class="sound-btn" onclick="toggleSound('gameVideo4', this)">🔇</button>
+
+<div class="game-overlay">
+<h3>Hedgehog Labelling</h3>
+<p>Dynamic labeling system that positions labels based on camera position and object radius.</p>
+</div>
+
+</div>
+
+
+<!-- Game 5 -->
+<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+
+<video id="gameVideo5" autoplay muted loop width="600" height="336">
+<source src="images/wobble effect.mp4" type="video/mp4">
+</video>
+
+<button class="sound-btn" onclick="toggleSound('gameVideo5', this)">🔇</button>
+
+<div class="game-overlay">
+<h3>Wobble Effect Unity Shader</h3>
+<p>Dynamic liquid wobble effect using Unity Shader Graph.</p>
+</div>
+
+</div>
+
+
+<!-- Game 6 -->
+<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+
+<video id="gameVideo6" autoplay muted loop width="600" height="336">
+<source src="images/Blinking Lights.mp4" type="video/mp4">
+</video>
+
+<button class="sound-btn" onclick="toggleSound('gameVideo6', this)">🔇</button>
+
+<div class="game-overlay">
+<h3>Fresnel Blinking Light Effect</h3>
+<p>Blinking light effect created using Fresnel in Unity Shader.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+<!-- ===== Graphic Design Section ===== -->
+<section id="graphic-design" class="paddsection">
+
+<div class="container text-center">
+
+<div class="section-title">
+<h2 class="modern-title">Graphic Design Works</h2>
+<p>Creative posters, digital art, and branding visuals crafted with passion.</p>
+</div>
+
+<div class="row">
+
+<!-- Poster Design -->
+<div class="col-lg-4 col-md-6" data-aos="zoom-in">
+
+<div class="design-card" onclick="openGallery('poster-gallery')">
+
+<img src="images/portfolio/flyer.1.jpg" class="img-fluid" alt="">
+
+<div class="design-info">
+<h3>Minimal Poster Design</h3>
+<p>A clean and modern poster designed for a fashion campaign.</p>
+</div>
+
+</div>
+
+</div>
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+</section>
+<!-- Poster Gallery -->
+<div id="poster-gallery" class="gallery-page" style="display:none;">
+
+<button class="back-btn" onclick="closeGallery()">← Back</button>
+
+<div class="gallery-grid">
+
+<img src="images/portfolio/flyer.1.jpg" onclick="openImage(this)">
+<img src="images/portfolio/flyer.2.jpg" onclick="openImage(this)">
+<img src="images/portfolio/flyer.3.jpg" onclick="openImage(this)">
+<img src="images/portfolio/flyer.4.jpg" onclick="openImage(this)">
+<img src="images/portfolio/flyer.5.jpg" onclick="openImage(this)">
+<img src="images/portfolio/flyer.6.jpg" onclick="openImage(this)">
+
+</div>
+
+</div>
+
+<!-- IMAGE VIEWER (ADD HERE) -->
+<div id="imageViewer" class="image-viewer" onclick="closeImage()">
+  <img id="viewerImg">
+</div>
+
+<script>
+function openImage(img){
+  document.getElementById("imageViewer").style.display="flex";
+  document.getElementById("viewerImg").src = img.src;
+}
+
+function closeImage(){
+  document.getElementById("imageViewer").style.display="none";
+}
+</script>
+
+
+<!-- Logo Design -->
+<div class="col-lg-4 col-md-6" data-aos="zoom-in">
+
+<div class="design-card" onclick="openGallery('logo-gallery')">
+
+<img src="images/portfolio/graphic design/akansha logo.png" class="img-fluid" alt="">
+
+<div class="design-info">
+<h3>Logo Design</h3>
+<p>Collection of modern brand logo designs.</p>
+</div>
+
+</div>
+</div>
+</section>
+<div id="logo-gallery" class="gallery-page" style="display:none;">
+
+<button class="back-btn" onclick="closeGallery()">← Back</button>
+
+<div class="gallery-grid">
+
+<img src="images/portfolio/logo sbc.jpg"onclick="openImage(this)">
+<img src="images/portfolio/graphic design/akansha logo.png" onclick="openImage(this)">
+<img src="images/portfolio/graphic design/mps logo.jpg" onclick="openImage(this)">
+<img src="images/portfolio/graphic design/msi.png" onclick="openImage(this)">
+<img src="images/portfolio/imageIN  logo-03.jpg" onclick="openImage(this)">
+
+
+</div>
+
+</div>
+
+
+  <!-- ===== Footer ===== -->
   <div id="footer" class="text-center">
     <div class="container">
       <div class="socials-media text-center">
-
         <ul class="list-unstyled">
           <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
           <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
-          <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
+          <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
         </ul>
-
       </div>
-
-      <p>&copy; Copyrights Folio. All rights reserved.</p>
-
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-
+      <p>&copy; Copyright 2026 Sridhin. All Rights Reserved.</p>
+      <div class="credits">Designed with s❤️k</div>
     </div>
   </div>
-  <!-- End section footer -->
 
-  <!-- JavaScript Libraries -->
+  <!-- JS Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -453,13 +460,38 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/magnific-popup/magnific-popup.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-</body>
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
 
-</html>
+window.addEventListener('load', function(){
+AOS.refresh();
+});
+
+function toggleSound(videoId, button){
+
+let videos = document.querySelectorAll("video");
+let video = document.getElementById(videoId);
+
+videos.forEach(v => {
+if(v !== video){
+v.muted = true;
+}
+});
+
+if(video.muted){
+video.muted = false;
+button.innerHTML = "🔊";
+}else{
+video.muted = true;
+button.innerHTML = "🔇";
+}
+
+}
+
+</script>
