@@ -136,6 +136,49 @@ document.querySelector(".nav-menu").classList.toggle("active");
 
 </script>
 
+<script src="js/main.js"></script>
+
+<script>
+
+document.addEventListener("mousemove", function(e){
+
+  let particle = document.createElement("span");
+  particle.className = "mouse-particle";
+
+  particle.style.left = e.clientX + "px";
+  particle.style.top = e.clientY + "px";
+
+  document.body.appendChild(particle);
+
+  setTimeout(function(){
+    particle.remove();
+  },600);
+
+});
+
+</script>
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", function() {
+  navMenu.classList.toggle("active");
+});
+
+/* close menu when clicking link */
+
+document.querySelectorAll(".nav-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
+});
+
+</script>
+
+</body>
+
+
 <body>
 
   <!-- ===== Navbar ===== -->
@@ -144,7 +187,9 @@ document.querySelector(".nav-menu").classList.toggle("active");
       <div class="logo">
         <a href="#header"><img src="images/logo.png" alt="logo"></a>
       </div>
-      <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+      <div class="responsive" id="menu-toggle">
+<i class="ion-navicon-round"></i>
+</div>
 
       <ul class="nav-menu list-unstyled d-flex">
         <li><a href="#header" class="smoothScroll">Home</a></li>
@@ -188,8 +233,14 @@ document.querySelector(".nav-menu").classList.toggle("active");
 <li><a href="https://www.linkedin.com/in/sridhin-raj-kp-979bb4255"><i class="ion-social-linkedin"></i></a></li>
 </ul>
 
-<p href="Simple Professional CV Resume_20250226_121427_0000.pdf" download class="btn btn-warning">
+<div class="cv-buttons">
+
+<a href="Simple Professional CV Resume_20250226_121427_0000.pdf" download class="btn btn-warning">
 Download CV
+</a>
+
+<a href="ATS friendly cv.pdf" download class="btn-ats">
+ATS CV
 </a>
 
 </div>
