@@ -11,9 +11,9 @@
   <meta content="Game Developer, Unity, Unreal, Technical Artist, Portfolio" name="keywords">
 
   <!-- Google Fonts -->
- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  
- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"><!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"><!-- Bootstrap CSS -->
 
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,159 +27,160 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
 
- <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.png">
 
   <style>
-   
+
 
   </style>
 </head>
-<script>
-
-function toggleSound(videoId, button){
-
-let videos=document.querySelectorAll("video");
-
-videos.forEach(v=>{
-if(v.id!==videoId){
-v.muted=true;
-}
-});
-
-let video=document.getElementById(videoId);
-
-if(video.muted){
-video.muted=false;
-button.innerHTML="🔊";
-}else{
-video.muted=true;
-button.innerHTML="🔇";
-}
-
-}
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
-<script>
-particlesJS("particles-js", {
-
-particles:{
-number:{value:80},
-color:{value:"#ffffff"},
-shape:{type:"circle"},
-opacity:{value:0.5},
-size:{value:3},
-
-line_linked:{
-enable:true,
-distance:150,
-color:"#ffffff",
-opacity:0.4,
-width:1
-},
-
-move:{
-enable:true,
-speed:2
-}
-
-},
-
-interactivity:{
-events:{
-onhover:{enable:true,mode:"repulse"}
-}
-}
-
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-<script>
-
-function openGallery(id){
-
-document.getElementById("graphic-design").style.display="none";
-document.getElementById(id).style.display="block";
-
-}
-
-function closeGallery(){
-
-document.getElementById("graphic-design").style.display="block";
-
-document.querySelectorAll(".gallery-page").forEach(g=>{
-g.style.display="none";
-});
-
-}
-
-function openImage(img){
-document.getElementById("imageViewer").style.display="flex";
-document.getElementById("viewerImg").src = img.src;
-}
-
-function closeImage(){
-document.getElementById("imageViewer").style.display="none";
-}
-
-</script>
-
-<script>
-
-document.querySelector(".responsive").addEventListener("click", function(){
-document.querySelector(".nav-menu").classList.toggle("active");
-});
-
-</script>
-
-<script src="js/main.js"></script>
-
-<script>
-
-document.addEventListener("mousemove", function(e){
-
-  let particle = document.createElement("span");
-  particle.className = "mouse-particle";
-
-  particle.style.left = e.clientX + "px";
-  particle.style.top = e.clientY + "px";
-
-  document.body.appendChild(particle);
-
-  setTimeout(function(){
-    particle.remove();
-  },600);
-
-});
-
-</script>
-<script>
-
-const toggle = document.querySelector(".responsive");
-const menu = document.querySelector(".nav-menu");
-
-toggle.addEventListener("click", () => {
-menu.classList.toggle("active");
-});
-
-/* close menu when clicking link */
-
-document.querySelectorAll(".nav-menu a").forEach(link => {
-link.addEventListener("click", () => {
-menu.classList.remove("active");
-});
-});
-
-</script>
-
-</body>
-
 
 <body>
+  <script>
+
+    function toggleSound(videoId, button) {
+
+      let videos = document.querySelectorAll("video");
+
+      videos.forEach(v => {
+        if (v.id !== videoId) {
+          v.muted = true;
+        }
+      });
+
+      let video = document.getElementById(videoId);
+
+      if (video.muted) {
+        video.muted = false;
+        button.innerHTML = "🔊";
+      } else {
+        video.muted = true;
+        button.innerHTML = "🔇";
+      }
+
+    }
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+
+        move: {
+          enable: true,
+          speed: 2
+        }
+
+      },
+
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      }
+
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+
+    function openGallery(id) {
+
+      document.getElementById("graphic-design").style.display = "none";
+      document.getElementById(id).style.display = "block";
+
+    }
+
+    function closeGallery() {
+
+      document.getElementById("graphic-design").style.display = "block";
+
+      document.querySelectorAll(".gallery-page").forEach(g => {
+        g.style.display = "none";
+      });
+
+    }
+
+    function openImage(img) {
+      document.getElementById("imageViewer").style.display = "flex";
+      document.getElementById("viewerImg").src = img.src;
+    }
+
+    function closeImage() {
+      document.getElementById("imageViewer").style.display = "none";
+    }
+
+  </script>
+
+
+
+  <script src="js/main.js"></script>
+
+  <script>
+
+    document.addEventListener("mousemove", function (e) {
+
+      let particle = document.createElement("span");
+      particle.className = "mouse-particle";
+
+      particle.style.left = e.clientX + "px";
+      particle.style.top = e.clientY + "px";
+
+      document.body.appendChild(particle);
+
+      setTimeout(function () {
+        particle.remove();
+      }, 600);
+
+    });
+
+  </script>
+  <script>
+
+    const toggle = document.querySelector(".responsive");
+    const menu = document.querySelector(".nav-menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    /* close menu when clicking link */
+
+    document.querySelectorAll(".nav-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
+
+  </script>
+
+  <!-- ===== Preloader ===== -->
+  <div id="preloader">
+    <div class="loader-text-wrapper">
+      <span id="loader-text">0%</span>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </div>
 
   <!-- ===== Navbar ===== -->
   <nav id="main-nav">
@@ -188,8 +189,8 @@ menu.classList.remove("active");
         <a href="#header"><img src="images/logo.png" alt="logo"></a>
       </div>
       <div class="responsive" id="menu-toggle">
-<i class="ion-navicon-round"></i>
-</div>
+        <i class="ion-navicon-round"></i>
+      </div>
 
       <ul class="nav-menu list-unstyled d-flex">
         <li><a href="#header" class="smoothScroll">Home</a></li>
@@ -202,363 +203,415 @@ menu.classList.remove("active");
   </nav>
 
   <!-- ===== Header Section ===== -->
-<header id="header" class="home text-center">
+  <header id="header" class="home text-center">
 
-<!-- Particles background -->
-<div id="particles-js"></div>
+    <!-- Particles background -->
+    <div id="particles-js"></div>
 
-<!-- Shooting stars -->
+    <!-- Shooting stars -->
 
-<div class="pixel-meteor" style="top:100px;"></div>
-<div class="pixel-meteor" style="top:250px; animation-delay:2s;"></div>
-<div class="pixel-meteor" style="top:400px; animation-delay:4s;"></div>
+    <div class="pixel-meteor" style="top:100px;"></div>
+    <div class="pixel-meteor" style="top:250px; animation-delay:2s;"></div>
+    <div class="pixel-meteor" style="top:400px; animation-delay:4s;"></div>
 
-<div class="cube" style="left:10%; top:70%"></div>
-<div class="cube" style="left:60%; top:60%"></div>
-<div class="cube" style="left:80%; top:50%"></div>
+    <div class="cube" style="left:10%; top:70%"></div>
+    <div class="cube" style="left:60%; top:60%"></div>
+    <div class="cube" style="left:80%; top:50%"></div>
 
-<div class="container">
-<div class="header-content">
+    <!-- Animated Pixel Character -->
+    <div class="pixel-character-wrapper">
+      <svg class="pixel-character" viewBox="0 0 16 16" fill="#00ff9d" xmlns="http://www.w3.org/2000/svg"
+        style="shape-rendering: crispEdges;">
+        <!-- Head -->
+        <rect x="6" y="2" width="4" height="4" />
+        <!-- Body -->
+        <rect x="5" y="6" width="6" height="5" />
+        <!-- Arm Left Up (Reaching for grid) -->
+        <rect x="3" y="1" width="2" height="6" />
+        <!-- Arm Right Up -->
+        <rect x="11" y="1" width="2" height="6" />
+        <!-- Legs -->
+        <rect x="5" y="11" width="2" height="5" />
+        <rect x="9" y="11" width="2" height="5" />
+      </svg>
+    </div>
 
-<h1>I am <strong>Sridhinraj K.P</strong></h1>
+    <!-- Animated Pixel Character 2 (Walking) -->
+    <div class="pixel-character-wrapper-2">
+      <svg class="pixel-character-2" viewBox="0 0 16 16" fill="#00f7ff" xmlns="http://www.w3.org/2000/svg"
+        style="shape-rendering: crispEdges;">
+        <!-- Head -->
+        <rect x="6" y="4" width="4" height="4" />
+        <!-- Body -->
+        <rect x="5" y="8" width="6" height="4" />
+        <!-- Arm Left Down -->
+        <rect x="3" y="8" width="2" height="4" />
+        <!-- Arm Right Down -->
+        <rect x="11" y="8" width="2" height="4" />
+        <!-- Legs -->
+        <rect x="5" y="12" width="2" height="4" />
+        <rect x="9" y="12" width="2" height="4" />
+      </svg>
+    </div>
 
-<div class="role-container">
-<span class="role game-developer">Game Developer</span>
-<span class="role technical-artist">Technical Artist</span>
-</div>
+    <div class="container">
+      <div class="header-content">
 
-<ul class="list-unstyled list-social">
-<li><a href="https://www.facebook.com/Sridhinrajsro"><i class="ion-social-facebook"></i></a></li>
-<li><a href="https://www.instagram.com/sridhin_raj_"><i class="ion-social-instagram"></i></a></li>
-<li><a href="https://www.linkedin.com/in/sridhin-raj-kp-979bb4255"><i class="ion-social-linkedin"></i></a></li>
-</ul>
+        <h1>I am <strong>Sridhinraj K.P</strong></h1>
 
-<div class="cv-buttons">
+        <div class="role-container">
+          <span class="role game-developer">Game Developer</span>
+          <span class="role technical-artist">Technical Artist</span>
+        </div>
 
-<a href="Simple Professional CV Resume_20250226_121427_0000.pdf" download class="btn btn-warning">
-Download CV
-</a>
+        <ul class="list-unstyled list-social">
+          <li><a href="https://www.facebook.com/Sridhinrajsro"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/sridhin_raj_"><i class="ion-social-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/sridhin-raj-kp-979bb4255"><i class="ion-social-linkedin"></i></a>
+          </li>
+        </ul>
 
-<a href="ATS friendly cv.pdf" download class="btn-ats">
-ATS CV
-</a>
+        <div class="cv-buttons">
 
-</div>
-</div>
+          <a href="Simple Professional CV Resume_20250226_121427_0000.pdf" download class="btn btn-warning">
+            Download CV
+          </a>
 
-</header>
-  <<!-- ===== About Section ===== -->
-<div id="about" class="paddsection">
-  <div class="container">
-    <div class="row justify-content-between align-items-center">
+          <a href="ATS friendly cv.pdf" download class="btn-ats">
+            ATS CV
+          </a>
 
-      <!-- Image column -->
-      <div class="col-lg-4 col-md-5 col-12 text-center">
-        <div class="div-img-bg">
-          <img src="images/me.jpg" class="img-fluid" alt="me">
         </div>
       </div>
 
-      <!-- Text column -->
-      <div class="col-lg-7 col-md-7 col-12">
-        <div class="about-descr">
-          <p class="p-heading">
-            I am a Game Developer, Technical Artist, and Creative Designer passionate about building immersive worlds and
-            interactive experiences. By combining technical expertise with artistic vision, I craft games and digital
-            projects that are both innovative and visually engaging.
-          </p>
-        </div>
-      </div>
+  </header>
+  <!--=====About Section=====-->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
 
+        <!-- Image column -->
+        <div class="col-lg-4 col-md-5 col-12 text-center">
+          <div class="div-img-bg">
+            <img src="images/me.jpg" class="img-fluid" alt="me">
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="col-lg-7 col-md-7 col-12">
+          <div class="about-descr">
+            <p class="p-heading">
+              I am a Game Developer, Technical Artist, and Creative Designer passionate about building immersive
+              worlds and
+              interactive experiences. By combining technical expertise with artistic vision, I craft games and
+              digital
+              projects that are both innovative and visually engaging.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
   <!-- ===== Skills Section ===== -->
   <div id="services">
     <div class="container">
       <div class="services-carousel owl-theme text-center">
-        <div class="services-block"><i class="fas fa-gamepad"></i><span>Unity</span><p>70%</p></div>
-        <div class="services-block"><i class="fas fa-gamepad"></i><span>Unreal Engine</span><p>60%</p></div>
-        <div class="services-block"><i class="fas fa-paint-brush"></i><span>Photoshop</span><p>70%</p></div>
-        <div class="services-block"><i class="fas fa-cube"></i><span>Maya</span><p>50%</p></div>
-        <div class="services-block"><i class="fas fa-cube"></i><span>Blender</span><p>60%</p></div>
-        <div class="services-block"><i class="fas fa-video"></i><span>After Effects</span><p>70%</p></div>
-        <div class="services-block"><i class="fas fa-video"></i><span>Premiere Pro</span><p>70%</p></div>
-                <div class="services-block"><i class="fas fa-cube"></i><span>Illustrator</span><p>80%</p></div>
+        <div class="services-block"><i class="fas fa-gamepad"></i><span>Unity</span>
+          <p>70%</p>
+        </div>
+        <div class="services-block"><i class="fas fa-gamepad"></i><span>Unreal Engine</span>
+          <p>60%</p>
+        </div>
+        <div class="services-block"><i class="fas fa-paint-brush"></i><span>Photoshop</span>
+          <p>70%</p>
+        </div>
+        <div class="services-block"><i class="fas fa-cube"></i><span>Maya</span>
+          <p>50%</p>
+        </div>
+        <div class="services-block"><i class="fas fa-cube"></i><span>Blender</span>
+          <p>60%</p>
+        </div>
+        <div class="services-block"><i class="fas fa-video"></i><span>After Effects</span>
+          <p>70%</p>
+        </div>
+        <div class="services-block"><i class="fas fa-video"></i><span>Premiere Pro</span>
+          <p>70%</p>
+        </div>
+        <div class="services-block"><i class="fas fa-cube"></i><span>Illustrator</span>
+          <p>80%</p>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- ===== Portfolio Section ===== -->
   <div id="portfolio" class="text-center paddsection">
-<div class="container">
+    <div class="container">
 
-<div class="section-title text-center">
-<h2>My Games</h2>
-</div>
+      <div class="section-title text-center">
+        <h2>My Games</h2>
+      </div>
 
-<!-- Game 1 -->
-<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+      <!-- Game 1 -->
+      <div class="portfolio-thumbnail game-card">
 
-<video id="gameVideo1" autoplay muted loop width="600" height="336">
-<source src="images/lv_0_20240217072114 (1).mp4" type="video/mp4">
-</video>
+        <video id="gameVideo1" playsinline preload="metadata" muted loop width="600" height="336">
+          <source src="images/lv_0_20240217072114 (1).mp4" type="video/mp4">
+        </video>
 
-<button class="sound-btn" onclick="toggleSound('gameVideo1', this)">🔇</button>
+        <button class="sound-btn" onclick="toggleSound('gameVideo1', this)">🔇</button>
 
-<div class="game-overlay">
-<h3>Chronicles of Celestial Echo</h3>
-<p>3D strategy survival game.</p>
-<a href="https://sridhinrajkp.itch.io/chronicles-of-celestial-echo" class="play-btn" target="_blank">Play Now</a>
-</div>
+        <div class="game-overlay">
+          <h3>Chronicles of Celestial Echo</h3>
+          <p>3D strategy survival game.</p>
+          <a href="https://sridhinrajkp.itch.io/chronicles-of-celestial-echo" class="play-btn" target="_blank">Play
+            Now</a>
+        </div>
 
-</div>
+      </div>
 
 
-<!-- Game 2 -->
-<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+      <!-- Game 2 -->
+      <div class="portfolio-thumbnail game-card">
 
-<video id="gameVideo2" autoplay muted loop width="600" height="336">
-<source src="images/survival.mp4" type="video/mp4">
-</video>
+        <video id="gameVideo2" playsinline preload="metadata" muted loop width="600" height="336">
+          <source src="images/survival.mp4" type="video/mp4">
+        </video>
 
-<button class="sound-btn" onclick="toggleSound('gameVideo2', this)">🔇</button>
+        <button class="sound-btn" onclick="toggleSound('gameVideo2', this)">🔇</button>
 
-<div class="game-overlay">
-<h3>Dungeon Escape</h3>
-<p>3D survival game where the player must escape a dungeon by completing missions and avoiding enemies.</p>
-</div>
+        <div class="game-overlay">
+          <h3>Dungeon Escape</h3>
+          <p>3D survival game where the player must escape a dungeon by completing missions and avoiding enemies.</p>
+        </div>
 
-</div>
+      </div>
 
 
-<!-- Game 3 -->
-<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+      <!-- Game 3 -->
+      <div class="portfolio-thumbnail game-card">
 
-<video id="gameVideo3" autoplay muted loop width="600" height="336">
-<source src="images/bottleblaster.mp4" type="video/mp4">
-</video>
+        <video id="gameVideo3" playsinline preload="metadata" muted loop width="600" height="336">
+          <source src="images/bottleblaster.mp4" type="video/mp4">
+        </video>
 
-<button class="sound-btn" onclick="toggleSound('gameVideo3', this)">🔇</button>
+        <button class="sound-btn" onclick="toggleSound('gameVideo3', this)">🔇</button>
 
-<div class="game-overlay">
-<h3>Bottle Blaster VR</h3>
-<p>An immersive VR experience where players shoot bottles using different guns across dynamic environments.</p>
-</div>
+        <div class="game-overlay">
+          <h3>Bottle Blaster VR</h3>
+          <p>An immersive VR experience where players shoot bottles using different guns across dynamic environments.
+          </p>
+        </div>
 
-</div>
+      </div>
 
 
-<!-- Game 4 -->
-<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+      <!-- Game 4 -->
+      <div class="portfolio-thumbnail game-card">
 
-<video id="gameVideo4" autoplay muted loop width="600" height="336">
-<source src="images/HEDGEHOG EFFECT (1).mp4" type="video/mp4">
-</video>
+        <video id="gameVideo4" playsinline preload="metadata" muted loop width="600" height="336">
+          <source src="images/HEDGEHOG EFFECT (1).mp4" type="video/mp4">
+        </video>
 
-<button class="sound-btn" onclick="toggleSound('gameVideo4', this)">🔇</button>
+        <button class="sound-btn" onclick="toggleSound('gameVideo4', this)">🔇</button>
 
-<div class="game-overlay">
-<h3>Hedgehog Labelling</h3>
-<p>Dynamic labeling system that positions labels based on camera position and object radius.</p>
-</div>
+        <div class="game-overlay">
+          <h3>Hedgehog Labelling</h3>
+          <p>Dynamic labeling system that positions labels based on camera position and object radius.</p>
+        </div>
 
-</div>
+      </div>
 
 
-<!-- Game 5 -->
-<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+      <!-- Game 5 -->
+      <div class="portfolio-thumbnail game-card">
 
-<video id="gameVideo5" autoplay muted loop width="600" height="336">
-<source src="images/wobble effect.mp4" type="video/mp4">
-</video>
+        <video id="gameVideo5" playsinline preload="metadata" muted loop width="600" height="336">
+          <source src="images/wobble effect.mp4" type="video/mp4">
+        </video>
 
-<button class="sound-btn" onclick="toggleSound('gameVideo5', this)">🔇</button>
+        <button class="sound-btn" onclick="toggleSound('gameVideo5', this)">🔇</button>
 
-<div class="game-overlay">
-<h3>Wobble Effect Unity Shader</h3>
-<p>Dynamic liquid wobble effect using Unity Shader Graph.</p>
-</div>
+        <div class="game-overlay">
+          <h3>Wobble Effect Unity Shader</h3>
+          <p>Dynamic liquid wobble effect using Unity Shader Graph.</p>
+        </div>
 
-</div>
+      </div>
 
 
-<!-- Game 6 -->
-<div class="portfolio-thumbnail game-card" data-aos="zoom-in">
+      <!-- Game 6 -->
+      <div class="portfolio-thumbnail game-card">
 
-<video id="gameVideo6" autoplay muted loop width="600" height="336">
-<source src="images/Blinking Lights.mp4" type="video/mp4">
-</video>
+        <video id="gameVideo6" playsinline preload="metadata" muted loop width="600" height="336">
+          <source src="images/Blinking Lights.mp4" type="video/mp4">
+        </video>
 
-<button class="sound-btn" onclick="toggleSound('gameVideo6', this)">🔇</button>
+        <button class="sound-btn" onclick="toggleSound('gameVideo6', this)">🔇</button>
 
-<div class="game-overlay">
-<h3>Fresnel Blinking Light Effect</h3>
-<p>Blinking light effect created using Fresnel in Unity Shader.</p>
-</div>
+        <div class="game-overlay">
+          <h3>Fresnel Blinking Light Effect</h3>
+          <p>Blinking light effect created using Fresnel in Unity Shader.</p>
+        </div>
 
-</div>
+      </div>
 
-</div>
-</div>
-<!-- ===== Graphic Design Section ===== -->
-<section id="graphic-design" class="paddsection">
+    </div>
+  </div>
+  <!-- ===== Graphic Design Section ===== -->
+  <section id="graphic-design" class="paddsection">
 
-<div class="container text-center">
+    <div class="container text-center">
 
-<div class="section-title">
-<h2 class="modern-title">Graphic Design Works</h2>
-<p>Creative posters, digital art, and branding visuals crafted with passion.</p>
-</div>
+      <div class="section-title">
+        <h2 class="modern-title">Graphic Design Works</h2>
+        <p>Creative posters, digital art, and branding visuals crafted with passion.</p>
+      </div>
 
-<div class="row">
+      <div class="row">
 
-<!-- Poster Design -->
-<div class="col-lg-4 col-md-6" data-aos="zoom-in">
+        <!-- Poster Design -->
+        <div class="col-lg-4 col-md-6">
 
-<div class="design-card" onclick="openGallery('poster-gallery')">
+          <div class="design-card" onclick="openGallery('poster-gallery')">
 
-<img src="images/portfolio/flyer.1.jpg" class="img-fluid" alt="">
+            <img src="images/portfolio/flyer.1.jpg" class="img-fluid" alt="">
 
-<div class="design-info">
-<h3>Minimal Poster Design</h3>
-<p>A clean and modern poster designed for a fashion campaign.</p>
-</div>
+            <div class="design-info">
+              <h3>Minimal Poster Design</h3>
+              <p>A clean and modern poster designed for a fashion campaign.</p>
+            </div>
 
-</div>
+          </div>
 
-</div>
+        </div>
 
-</div> <!-- row -->
-</div> <!-- container -->
+        <!-- Logo Design -->
+        <div class="col-lg-4 col-md-6">
 
-</section>
-<!-- Poster Gallery -->
-<div id="poster-gallery" class="gallery-page" style="display:none;">
+          <div class="design-card" onclick="openGallery('logo-gallery')">
 
-<button class="back-btn" onclick="closeGallery()">← Back</button>
+            <img src="images/portfolio/graphic design/akansha logo.png" class="img-fluid" alt="">
 
-<div class="gallery-grid">
+            <div class="design-info">
+              <h3>Logo Design</h3>
+              <p>Collection of modern brand logo designs.</p>
+            </div>
 
-<img src="images/portfolio/flyer.1.jpg" onclick="openImage(this)">
-<img src="images/portfolio/flyer.2.jpg" onclick="openImage(this)">
-<img src="images/portfolio/flyer.3.jpg" onclick="openImage(this)">
-<img src="images/portfolio/flyer.4.jpg" onclick="openImage(this)">
-<img src="images/portfolio/flyer.5.jpg" onclick="openImage(this)">
-<img src="images/portfolio/flyer.6.jpg" onclick="openImage(this)">
+          </div>
 
-</div>
+        </div>
 
-</div>
+        <!-- Game Art -->
+        <div class="col-lg-4 col-md-6">
 
-<!-- IMAGE VIEWER (ADD HERE) -->
-<div id="imageViewer" class="image-viewer" onclick="closeImage()">
-  <img id="viewerImg">
-</div>
+          <div class="design-card" onclick="openGallery('gameart-gallery')">
 
-<script>
-function openImage(img){
-  document.getElementById("imageViewer").style.display="flex";
-  document.getElementById("viewerImg").src = img.src;
-}
+            <img src="images/portfolio/graphic design/breakthe chain ui.png" class="img-fluid" alt="">
 
-function closeImage(){
-  document.getElementById("imageViewer").style.display="none";
-}
-</script>
+            <div class="design-info">
+              <h3>Game Art</h3>
+              <p>Concept art and UI assets for games.</p>
+            </div>
 
+          </div>
 
-<!-- Logo Design -->
-<div class="col-lg-4 col-md-6" data-aos="zoom-in">
+        </div>
 
-<div class="design-card" onclick="openGallery('logo-gallery')">
+      </div> <!-- row -->
+    </div> <!-- container -->
 
-<img src="images/portfolio/graphic design/akansha logo.png" class="img-fluid" alt="">
+  </section>
 
-<div class="design-info">
-<h3>Logo Design</h3>
-<p>Collection of modern brand logo designs.</p>
-</div>
+  <!-- Poster Gallery -->
+  <div id="poster-gallery" class="gallery-page" style="display:none;">
 
-</div>
-</div>
-</section>
-<div id="logo-gallery" class="gallery-page" style="display:none;">
+    <button class="back-btn" onclick="closeGallery()">← Back</button>
 
-<button class="back-btn" onclick="closeGallery()">← Back</button>
+    <div class="gallery-grid">
 
-<div class="gallery-grid">
+      <img src="images/portfolio/flyer.1.jpg" onclick="openImage(this)">
+      <img src="images/portfolio/flyer.2.jpg" onclick="openImage(this)">
+      <img src="images/portfolio/flyer.3.jpg" onclick="openImage(this)">
+      <img src="images/portfolio/flyer.4.jpg" onclick="openImage(this)">
+      <img src="images/portfolio/flyer.5.jpg" onclick="openImage(this)">
+      <img src="images/portfolio/flyer.6.jpg" onclick="openImage(this)">
 
-<img src="images/portfolio/logo sbc.jpg"onclick="openImage(this)">
-<img src="images/portfolio/graphic design/akansha logo.png" onclick="openImage(this)">
-<img src="images/portfolio/graphic design/mps logo.jpg" onclick="openImage(this)">
-<img src="images/portfolio/graphic design/msi.png" onclick="openImage(this)">
-<img src="images/portfolio/imageIN  logo-03.jpg" onclick="openImage(this)">
+    </div>
 
+  </div>
 
-</div>
+  <!-- Logo Gallery -->
+  <div id="logo-gallery" class="gallery-page" style="display:none;">
 
-</div>
+    <button class="back-btn" onclick="closeGallery()">← Back</button>
 
-<!-- Game Art -->
-<div class="col-lg-4 col-md-6" data-aos="zoom-in">
+    <div class="gallery-grid">
 
-<div class="design-card" onclick="openGallery('gameart-gallery')">
+      <img src="images/portfolio/logo sbc.jpg" onclick="openImage(this)">
+      <img src="images/portfolio/graphic design/akansha logo.png" onclick="openImage(this)">
+      <img src="images/portfolio/graphic design/mps logo.jpg" onclick="openImage(this)">
+      <img src="images/portfolio/graphic design/msi.png" onclick="openImage(this)">
+      <img src="images/portfolio/imageIN  logo-03.jpg" onclick="openImage(this)">
 
-<img src="images/portfolio/graphic design/breakthe chain ui.png" class="img-fluid" alt="">
+    </div>
 
-<div class="design-info">
-<h3>Game Art</h3>
-<p>Concept art and UI assets for games.</p>
-</div>
+  </div>
 
-</div>
+  <!-- Game Art Gallery -->
+  <div id="gameart-gallery" class="gallery-page" style="display:none;">
 
-</div>
-<div id="gameart-gallery" class="gallery-page" style="display:none;">
+    <button class="back-btn" onclick="closeGallery()">← Back</button>
 
-<button class="back-btn" onclick="closeGallery()">← Back</button>
+    <div class="gallery-grid">
 
-<div class="gallery-grid">
+      <img src="images/portfolio/graphic design/indotune poster black.png" onclick="openImage(this)">
+      <img src="images/portfolio/graphic design/indotune poster.png" onclick="openImage(this)">
+      <img
+        src="images/portfolio/graphic design/Green and Yellow Modern Automotive Event Promotion Instagram Story_20240831_215503_0000.png"
+        onclick="openImage(this)">
+      <img src="images/portfolio/graphic design/indotunes poster  grey.png" onclick="openImage(this)">
+      <img src="images/portfolio/graphic design/Blue and White Simple IU UX Design App_20240528_031722_0000.png"
+        onclick="openImage(this)">
 
-<img src="images/portfolio/graphic design/indotune poster black.png" onclick="openImage(this)">
-<img src="images/portfolio/graphic design/indotune poster.png" onclick="openImage(this)">
-<img src="images/portfolio/graphic design/Green and Yellow Modern Automotive Event Promotion Instagram Story_20240831_215503_0000.png" onclick="openImage(this)">
-<img src="images/portfolio/graphic design/indotunes poster  grey.png" onclick="openImage(this)">
-<img src="images/portfolio/graphic design/Blue and White Simple IU UX Design App_20240528_031722_0000.png" onclick="openImage(this)">
+    </div>
 
-</div>
+  </div>
 
-</div>
+  <!-- IMAGE VIEWER (ADD HERE) -->
+  <div id="imageViewer" class="image-viewer" onclick="closeImage()">
+    <img id="viewerImg">
+  </div>
   <!-- ===== Footer ===== -->
-   <section id="contact" class="paddsection">
+  <section id="contact" class="paddsection">
 
-<div class="container">
+    <div class="container">
 
-<h2>Contact Me</h2>
-<p>If you'd like to work together or have a project in mind, feel free to send a message.</p>
+      <h2>Contact Me</h2>
+      <p>If you'd like to work together or have a project in mind, feel free to send a message.</p>
 
-<form action="https://formspree.io/f/mwvrvodp" method="POST" class="contact-form">
+      <form action="https://formspree.io/f/mwvrvodp" method="POST" class="contact-form">
 
-<div class="form-group">
-<input type="text" name="name" placeholder="Your Name" required>
-</div>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
 
-<div class="form-group">
-<input type="email" name="email" placeholder="Your Email" required>
-</div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
 
-<div class="form-group">
-<textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-</div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        </div>
 
-<button type="submit">Send Message</button>
+        <button type="submit">Send Message</button>
 
-</form>
+      </form>
 
-</div>
+    </div>
 
-</section>
+  </section>
   <div id="footer" class="text-center">
     <div class="container">
       <div class="socials-media text-center">
@@ -584,35 +637,164 @@ function closeImage(){
   <script src="js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<script>
-AOS.init({
-duration:1000,
-once:true
-});
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
 
-window.addEventListener('load', function(){
-AOS.refresh();
-});
+    window.addEventListener('load', function () {
+      AOS.refresh();
+    });
 
-function toggleSound(videoId, button){
+    function toggleSound(videoId, button) {
 
-let videos = document.querySelectorAll("video");
-let video = document.getElementById(videoId);
+      let videos = document.querySelectorAll("video");
+      let video = document.getElementById(videoId);
 
-videos.forEach(v => {
-if(v !== video){
-v.muted = true;
-}
-});
+      videos.forEach(v => {
+        if (v !== video) {
+          v.muted = true;
+        }
+      });
 
-if(video.muted){
-video.muted = false;
-button.innerHTML = "🔊";
-}else{
-video.muted = true;
-button.innerHTML = "🔇";
-}
+      if (video.muted) {
+        video.muted = false;
+        button.innerHTML = "🔊";
+      } else {
+        video.muted = true;
+        button.innerHTML = "🔇";
+      }
 
-}
+    }
 
-</script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script>
+    // Initialize 3D Tilt Cards
+    VanillaTilt.init(document.querySelectorAll(".game-card, .design-card"), {
+      max: 12,
+      speed: 500,
+      glare: true,
+      "max-glare": 0.25,
+      perspective: 1000,
+      scale: 1.03
+    });
+
+    // Custom Glowing Cursor Logic
+    const cursor = document.createElement("div");
+    cursor.classList.add("custom-cursor");
+    document.body.appendChild(cursor);
+
+    document.addEventListener("mousemove", (e) => {
+      // Offset cursor smoothly
+      cursor.animate({
+        left: e.clientX + "px",
+        top: e.clientY + "px"
+      }, { duration: 150, fill: "forwards" });
+    });
+
+    // Cursor Hover Effect over links & cards
+    document.querySelectorAll("a, button, .game-card, .design-card, .responsive, img").forEach(el => {
+      el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+      el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+    });
+  </script>
+
+  <!-- GSAP & Magnetic Interactions -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Cinematic Preloader Setup
+    let loaderText = document.getElementById("loader-text");
+    let progressBar = document.getElementById("progress-bar");
+    let preloader = document.getElementById("preloader");
+
+    let progress = 0;
+    let loadInterval = setInterval(() => {
+      progress += Math.floor(Math.random() * 15) + 5;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(loadInterval);
+
+        // Hide preloader animation
+        gsap.to(preloader, {
+          y: "-100vh",
+          duration: 1.2,
+          ease: "power4.inOut",
+          delay: 0.2,
+          onComplete: initGSAPAnimations // start page animations after load
+        });
+      }
+      loaderText.innerText = progress + "%";
+      progressBar.style.width = progress + "%";
+    }, 100);
+
+    function initGSAPAnimations() {
+      // Hero Header Animations
+      gsap.from(".header-content h1", { y: 100, opacity: 0, duration: 1, ease: "power4.out" });
+      gsap.from(".header-content .role-container", { y: 50, opacity: 0, duration: 1, delay: 0.3, ease: "power4.out" });
+      gsap.from(".header-content .cv-buttons", { y: 50, opacity: 0, duration: 1, delay: 0.5, ease: "power4.out" });
+
+      // Staggering Scroll Animations for all titles
+      gsap.utils.toArray(".section-title h2").forEach(title => {
+        gsap.from(title, {
+          scrollTrigger: { trigger: title, start: "top 80%" },
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out"
+        });
+      });
+
+      // IntersectionObserver for Videos (Play only when visible)
+      const vidObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.play().catch(() => { });
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('video').forEach(vid => vidObserver.observe(vid));
+
+      // Parallax effect for cards
+      gsap.utils.toArray(".game-card, .design-card").forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: "top 85%" },
+          y: 100,
+          opacity: 0,
+          duration: 0.8,
+          delay: i % 3 * 0.1, // Stagger effect based on column position
+          ease: "back.out(1.7)"
+        });
+      });
+    }
+
+    // Magnetic Links
+    // Apply .magnetic wrapper class to everything we want to pull
+    document.querySelectorAll(".nav-menu a, .play-btn, .btn, .btn-ats").forEach(btn => {
+      btn.classList.add("magnetic");
+
+      btn.addEventListener("mousemove", (e) => {
+        const rect = btn.getBoundingClientRect();
+        const h = rect.width / 2;
+        const w = rect.height / 2;
+        const x = e.clientX - rect.left - h;
+        const y = e.clientY - rect.top - w;
+
+        // Pulled closer to cursor
+        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = `translate(0px, 0px)`;
+      });
+    });
+  </script>
+</body>
+
+</html>
