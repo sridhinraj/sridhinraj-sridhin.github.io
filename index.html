@@ -687,12 +687,20 @@
     document.body.appendChild(cursor);
 
     document.addEventListener("mousemove", (e) => {
-      // Offset cursor smoothly
-      cursor.animate({
-        left: e.clientX + "px",
-        top: e.clientY + "px"
-      }, { duration: 150, fill: "forwards" });
+      mouseX = e.clientX;
+      mouseY = e.clientY;
     });
+
+    let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+    let cursorX = mouseX, cursorY = mouseY;
+
+    function renderCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+      requestAnimationFrame(renderCursor);
+    }
+    requestAnimationFrame(renderCursor);
 
     // Cursor Hover Effect over links & cards
     document.querySelectorAll("a, button, .game-card, .design-card, .responsive, img").forEach(el => {

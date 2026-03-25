@@ -1688,3 +1688,10 @@ GAME PORTFOLIO FINAL FIX + ENHANCEMENTS
   0% { transform: translateX(110vw) scaleX(-1); }
   100% { transform: translateX(-10vw) scaleX(-1); }
 }
+
+/* ===== Performance & Hardware Acceleration ===== */
+html { scroll-behavior: smooth; }
+body::before { will-change: transform, background-position; }
+.custom-cursor, .pixel-character-wrapper, .pixel-character-wrapper-2, .pixel-character, .pixel-character-2, .cube, .magnetic, .pixel-meteor {
+  will-change: transform;
+}
