@@ -24,6 +24,7 @@ body {
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  cursor: none;
 }
 
 body::before {
@@ -1348,6 +1349,8 @@ GAME PORTFOLIO FINAL FIX + ENHANCEMENTS
 /* ===== Custom Glowing Cursor ===== */
 .custom-cursor {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 30px;
   height: 30px;
   border: 2px solid rgba(0, 255, 157, 0.4);
@@ -1685,13 +1688,31 @@ GAME PORTFOLIO FINAL FIX + ENHANCEMENTS
 }
 
 @keyframes just-walk {
-  0% { transform: translateX(110vw) scaleX(-1); }
-  100% { transform: translateX(-10vw) scaleX(-1); }
+  0% {
+    transform: translateX(110vw) scaleX(-1);
+  }
+
+  100% {
+    transform: translateX(-10vw) scaleX(-1);
+  }
 }
 
 /* ===== Performance & Hardware Acceleration ===== */
-html { scroll-behavior: smooth; }
-body::before { will-change: transform, background-position; }
-.custom-cursor, .pixel-character-wrapper, .pixel-character-wrapper-2, .pixel-character, .pixel-character-2, .cube, .magnetic, .pixel-meteor {
+html {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  will-change: transform, background-position;
+}
+
+.custom-cursor,
+.pixel-character-wrapper,
+.pixel-character-wrapper-2,
+.pixel-character,
+.pixel-character-2,
+.cube,
+.magnetic,
+.pixel-meteor {
   will-change: transform;
 }
