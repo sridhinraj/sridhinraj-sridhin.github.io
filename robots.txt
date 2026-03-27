@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sridhinraj.github.io/sridhinraj-sridhin.github.io/sitemap.xml
