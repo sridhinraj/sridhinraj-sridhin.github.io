@@ -223,6 +223,7 @@ nav {
   left: 0;
   width: 100%;
   background: rgba(5, 5, 5, 0.75);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   z-index: 1000;
   padding: 15px 40px;
@@ -321,6 +322,7 @@ nav ul li a:hover {
     height: 100vh;
     width: 260px;
     background: rgba(10, 10, 10, 0.95);
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     flex-direction: column;
     align-items: flex-end;
@@ -743,6 +745,113 @@ nav ul li a:hover {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/*  Web Projects
+/*-----------------------------------------------------------------------------------*/
+
+#web-projects {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.web-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.web-project-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 157, 0.15);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-decoration: none !important;
+  color: #c0c0c0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.web-project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.06), rgba(0, 247, 255, 0.04));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 14px;
+}
+
+.web-project-card:hover::before {
+  opacity: 1;
+}
+
+.web-project-card:hover {
+  border-color: rgba(0, 255, 157, 0.5);
+  box-shadow: 0 0 28px rgba(0, 255, 157, 0.15), 0 4px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+  color: #e0e0e0;
+  text-decoration: none !important;
+}
+
+.wp-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  line-height: 1;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 157, 0.3));
+}
+
+.wp-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wp-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin: 0 0 5px 0;
+  letter-spacing: 0.5px;
+}
+
+.wp-info p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #888;
+  margin: 0 0 8px 0;
+}
+
+.wp-tag {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #00ff9d;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.wp-arrow {
+  font-size: 20px;
+  color: #00ff9d;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.web-project-card:hover .wp-arrow {
+  opacity: 1;
+  transform: translate(3px, -3px);
+}
+
+/*-----------------------------------------------------------------------------------*/
 /*  Footer
 /*-----------------------------------------------------------------------------------*/
 
@@ -1128,6 +1237,7 @@ GAME PORTFOLIO FINAL FIX + ENHANCEMENTS
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
 
@@ -1474,6 +1584,7 @@ GAME PORTFOLIO FINAL FIX + ENHANCEMENTS
   overflow: hidden;
   cursor: pointer;
   background: rgba(20, 20, 20, 0.8) !important;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
@@ -1715,4 +1826,29 @@ body::before {
 .magnetic,
 .pixel-meteor {
   will-change: transform;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Inline-style replacements (accessibility & lint compliance)
+/*-----------------------------------------------------------------------------------*/
+
+/* Gallery pages hidden by default — shown via JS using display:block */
+.gallery-page {
+  display: none;
+}
+
+/* Pixel meteor position variants */
+.meteor-1 { top: 100px; }
+.meteor-2 { top: 250px; animation-delay: 2s; }
+.meteor-3 { top: 400px; animation-delay: 4s; }
+
+/* Floating cube position variants */
+.cube-1 { left: 10%; top: 70%; }
+.cube-2 { left: 60%; top: 60%; }
+.cube-3 { left: 80%; top: 50%; }
+
+/* Crisp pixel rendering for SVG characters */
+.pixel-character,
+.pixel-character-2 {
+  shape-rendering: crispEdges;
 }
